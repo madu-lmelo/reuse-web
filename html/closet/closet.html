@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>ReUse</title>
+    <link rel="stylesheet" href="closet.css">
+    <link rel="stylesheet" href="../../css/padrao.css">
+</head>
+<body>
+    <!-- ===== HEADER ===== -->
+    <header class="header">
+        <h1>Meu Closet</h1>
+
+        <div class="botoes">
+            <label for="togglePesquisa" class="btn-pesquisa">Pesquisar minha gaveta</label>
+            <a href="../cadastro closet/cadastro gaveta/criar_gaveta.html">Criar nova gaveta</a>
+        </div>
+
+        <!-- Checkbox escondido -->
+        <input type="checkbox" id="togglePesquisa" hidden>
+
+        <!-- Aba de pesquisa -->
+        <div class="aba-pesquisa">
+            <input type="text" placeholder="Digite sua pesquisa..."> <!-- se não houver ação, esconder essa div -->
+            <button>Buscar</button>
+        </div>
+    </header>
+
+    <!-- inverter as cores
+        agora sidebar #5e7858b0
+        card #5E7858 -->
+
+    <!-- ===== SIDEBAR ===== -->
+    <div class="sidebar">
+        <a href="../closet/closet.html">Meu Closet</a>
+        <a href="../pesquisa/pesquisa.html">Pesquisa</a>
+        <a href="../cadastro closet/cadastro roupa/cr_cpf.html">Cadastro de roupas</a>
+        <a href="doacoes.html">Doações</a>
+        <a href="../informacoes pessoais/cpf_perfil.html">Meu Perfil</a>
+    </div>
+
+    <!-- ===== CONTEÚDO PRINCIPAL ===== -->
+    <div class="content">
+        <section>
+            <!-- Card individual -->
+            <div class="card">
+                <img src="https://images.pexels.com/photos/18072337/pexels-photo-18072337/free-photo-of-lindo-bonito-atraente-elegante.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" />
+                <div class="paragrafo">
+                    <p>Doação</p>
+                    <p>1</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.pexels.com/photos/15114086/pexels-photo-15114086/free-photo-of-fotografia-aerea-aerofotografia-tiro-com-drone-pessoas.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" />
+                <div class="paragrafo">
+                    <p>Vendas</p>
+                    <p>1</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,127 @@
+/* ===== IMPORTAÇÃO DE FONTES ===== */
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+/* ===== ESTILO GLOBAL ===== */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lexend', serif;
+    background-color: #FAFBF9;
+}
+
+/* ===== HEADER ===== */
+.header {
+    display: flex;
+    align-items: center;
+    padding: 20px 35px;
+    box-sizing: border-box;
+    background-color: #FAFBF9;
+    font-family: "Playfair Display", serif;
+    color: #5E7858;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.header h1 {
+    font-size: 40px;
+    margin: 0;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+    width: 220px;
+    height: 100vh;
+    background-color: #5e7858b0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: white;
+    padding: 15px 20px;
+    display: block;
+    transition: background 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #FAFBF9;
+    color: #5E7858;
+}
+
+/* ===== CONTEÚDO PRINCIPAL ===== */
+.content {
+    margin-left: 220px; /* afasta do sidebar */
+    padding: 90px 20px 20px 20px; /* espaço no topo p/ header */
+}
+
+/* ===== FORMULÁRIO ===== */
+.form-section {
+    max-width: 500px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.form-section h2 {
+    color: #5E7858;
+    margin-bottom: 20px;
+    font-family: "Playfair Display", serif;
+}
+
+.label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #5E7858;
+}
+
+.input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 16px;
+}
+
+.toggle {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background-color: #5E7858;
+    color: #FAFBF9;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #466147;
+}
+
+.btn-primary {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+}
