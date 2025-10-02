@@ -36,7 +36,7 @@ loginEnviar.addEventListener('click', function(event) {
             const user = userCredential.user;
             alert('Login realizado com sucesso! Bem-vindo(a) ao ReUse!');
             console.log('Usuário logado:', user.email);
-            window.location.href = '../paginainicial/paginainicial.html'; 
+            window.location.href = '../closet/closet.html'; 
         })
         .catch((error) => {
             // Houve algum erro

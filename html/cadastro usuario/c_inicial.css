@@ -15,7 +15,6 @@ body, html {
 }
 
 .left-section {
-    color: #134313;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -23,14 +22,14 @@ body, html {
     padding: 2rem;
 }
 
-.left-section h1, .right-section h1 {
+h1 {
+    color: #134313;
     font-family: 'Playfair Display', sans-serif; /* Playfair para os títulos */
     font-weight: 700;
 }
 
 .right-section {
     background-color: #5E7858;
-    color: #fafbf9;
     display: flex;
     flex-direction: column;
     justify-content: center;
