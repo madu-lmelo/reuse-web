@@ -58,7 +58,7 @@ submit.addEventListener('click', function(event) {
     })
     .then(() => {
         alert('Conta criada e dados salvos com sucesso! Bem-vindo(a) ao ReUse!');
-        window.location.href = '../paginainicial/paginainicial.html';
+        window.location.href = '../closet/closet.html';
     })
     .catch((error) => {
         const errorCode = error.code;

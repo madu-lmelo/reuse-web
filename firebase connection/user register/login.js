@@ -1,3 +1,5 @@
+console.log("✅ login.js carregado com sucesso!");
+
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-app.js";
 import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-auth.js"; 
 
@@ -20,8 +22,8 @@ const loginEnviar = document.getElementById('loginEnviar');
 loginEnviar.addEventListener('click', function(event) {
     event.preventDefault(); // Evita comportamento padrão de envio de formulário
 
-    const emailLogin = document.getElementById('emailUsuario').value;
-    const senhaLogin = document.getElementById('senhaUsuario').value;
+    const emailLogin = document.getElementById('email').value;
+    const senhaLogin = document.getElementById('senha').value;
 
     // Garante que os dois campos foram preenchidos
     if (!emailLogin || !senhaLogin) {
