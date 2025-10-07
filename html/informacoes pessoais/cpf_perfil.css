@@ -1,54 +1,11 @@
-/* ===== IMPORTAÇÃO DE FONTES ===== */
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Lexend', sans-serif;
-}
-
-body {
-  display: flex;
-  height: 100vh;
-  background: #f8f9f5;
-}
-
-/* Sidebar */
-.sidebar {
-  width: 140px;
-  background: #5e7858;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 50px 0;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-
-.sidebar img {
-  width: 90px;
-  margin-bottom: 30px;
-}
-
-.sidebar a {
-  color: white;
-  font-size: 32px;
-  margin: 15px 0;
-  text-decoration: none;
-}
-
-/* Conteúdo principal */
-.content {
+.section {
   flex: 1;
   padding: 30px;
   position: relative;
   margin-left: 140px;
 }
 
-.content h1 {
+.section h1 {
   text-align: center;
   color: #134313;
   margin-bottom: 20px;

@@ -1,47 +1,33 @@
 /* ===== IMPORTAÇÃO DE FONTES ===== */
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
+/* ===== ESTILO GLOBAL ===== */
+:root {
+    --verde: #5E7858;
+    --verde-transp: #5e7858d5;
+    --branco: #FAFBF9;
+    --cinza: #ccc;
+
+    --shadow-sm: 0 2px 5px rgba(0,0,0,0.1);
+    --shadow-md: 0 4px 10px rgba(0,0,0,0.1);
+
+    --radius-sm: 8px;
+    --radius-full: 25px;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lexend', sans-serif;
+    background-color: var(--branco);
+}
+
 /* ===== LOGO ===== */
 .logo {
     display: block;
     width: 55%;
     height: auto;
     margin-bottom: 25px;
-}
-
-/* ===== HEADER ===== */
-.header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 50px;
-    box-sizing: border-box;
-    background-color: #f8fff1;
-    font-family: "Playfair Display", serif;
-    color: #5E7858;
-    width: 100%;
-    height: 150px;
-    z-index: 10;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    position: relative;
-}
-
-.header h1 {
-    font-size: 40px;
-    margin: 0;
-}
-
-.left-section {
-    left: 130px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 320px;
-}
-
-.right-section-header{
-    display: flex;
-    align-items: center;
 }
 
 /* ===== SIDEBAR ===== */
@@ -61,11 +47,17 @@
 }
 .sidebar a{
     text-decoration: none;
-    color: white;
     margin-bottom: 25px;
     padding: 15px 20px;
-    display: block;
     transition: background 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff;
+    font-size: 12px;
+    gap: 6px;
+    position: relative;
+    top: 10px;
 }
 .sidebar a:hover {
     background-color: #FAFBF9;
@@ -97,4 +89,69 @@
 .sidebar a:hover span {
     visibility: visible;
     opacity: 1;
+}
+
+/* ===== TOP-BAR ABA ===== */
+.topbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #5E7858;
+    font-family: 'Lexend', sans-serif;
+}
+
+/* ===== BOTÕES E LINKS DE PESQUISA TOP-BAR ABA ===== */
+.botoes {
+    display: flex;
+    gap: 10px;
+}
+.botoes a,
+.btn-pesquisa,
+.aba-pesquisa button {
+    background-color: var(--verde-transp);
+    color: var(--branco);
+    padding: 8px 15px;
+    border-radius: var(--radius-full);
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.botoes a:hover,
+.btn-pesquisa:hover,
+.aba-pesquisa button:hover {
+    background-color: var(--branco);
+    border: 1px solid var(--verde);
+    color: var(--verde);
+}
+
+/* ===== ABA DE PESQUISA ===== */
+.aba-pesquisa {
+    display: none;
+    gap: 10px;
+    align-items: center;
+}
+
+.aba-pesquisa input {
+    padding: 6px 12px;
+    border: 1px solid var(--cinza);
+    border-radius: var(--radius-sm);
+    font-size: 16px;
+}
+
+/* quando o checkbox está marcado, mostra a aba */
+#togglePesquisa:checked + .aba-pesquisa {
+    display: flex;
+}
+
+/* ===== CONTEÚDO PRINCIPAL ABA ===== */
+.content {
+    margin-left: 220px;
+    padding: 20px;
 }
