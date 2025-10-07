@@ -38,17 +38,6 @@ h1 {
     text-align: center;
 }
 
-.logo {
-    position: absolute;
-    top: 2rem;
-    left: 2rem;
-    display: flex;
-    align-items: center;
-    color: #134313;
-    font-family: 'Playfair Display', sans-serif; /* Opcional: Playfair para o nome da logo */
-    font-weight: 700;
-}
-
 .logo-img {
     height: 40px;
 }

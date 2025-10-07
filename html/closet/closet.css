@@ -4,7 +4,7 @@
 /* ===== ESTILO GLOBAL ===== */
 :root {
     --verde: #5E7858;
-    --verde-transp: #5e7858b0;
+    --verde-transp: #5e7858d5;
     --branco: #FAFBF9;
     --cinza: #ccc;
 
@@ -20,29 +20,6 @@ html, body {
     padding: 0;
     font-family: 'Lexend', sans-serif;
     background-color: var(--branco);
-}
-
-/* ===== HEADER ===== */
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 35px;
-    background-color: var(--branco);
-    font-family: "Playfair Display", serif;
-    color: var(--verde);
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 70px;
-    z-index: 10;
-    box-shadow: var(--shadow-sm);
-}
-
-.header h1 {
-    font-size: 40px;
-    margin: 0;
 }
 
 .botoes {
@@ -96,37 +73,10 @@ html, body {
     display: flex;
 }
 
-/* ===== SIDEBAR ===== */
-.sidebar {
-    width: 220px;
-    height: 100vh;
-    background-color: var(--verde-transp);
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 5;
-    display: flex;
-    flex-direction: column;
-    padding-top: 100px;
-}
-
-.sidebar a {
-    text-decoration: none;
-    color: var(--branco);
-    padding: 15px 20px;
-    display: block;
-    transition: background 0.3s;
-}
-
-.sidebar a:hover {
-    background-color: var(--branco);
-    color: var(--verde);
-}
-
-/* ===== CONTEÚDO PRINCIPAL ===== */
+/* ===== CONTEÚDO PRINCIPAL ABA ===== */
 .content {
     margin-left: 220px;
-    padding: 90px 20px 20px 20px;
+    padding: 20px;
 }
 
 /* ===== GRID DE CARDS ===== */
@@ -134,13 +84,12 @@ section {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 20px;
-    margin: 0 auto;
-    padding: 20px;
+    margin-top: 30px;
     max-width: 1600px;
 }
 
 .card {
-    background-color: var(--verde);
+    background-color: var(--verde-transp);
     border-radius: 20px;
     overflow: hidden;
     box-shadow: var(--shadow-md);
@@ -169,4 +118,13 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+/* ===== TOP-BAR ABA ===== */
+.topbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #5E7858;
+    font-family: 'Lexend', sans-serif;
 }
