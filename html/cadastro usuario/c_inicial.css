@@ -23,7 +23,7 @@ body, html {
 }
 
 h1 {
-    color: #134313;
+    color: #134313e0;
     font-family: 'Playfair Display', sans-serif; /* Playfair para os títulos */
     font-weight: 700;
 }
@@ -39,7 +39,7 @@ h1 {
 }
 
 .logo-img {
-    height: 40px;
+    height: 80px;
 }
 
 .form-control {

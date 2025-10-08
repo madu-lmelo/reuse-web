@@ -94,7 +94,7 @@ html, body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #5E7858;
+    color: #134313;
     font-family: 'Lexend', sans-serif;
     margin-top: 20px;
 }
@@ -103,7 +103,7 @@ html, body {
 hr {
     margin: 16px 0; 
     border: none; 
-    border-top: 2px solid #5E7858; 
+    border-top: 2px solid #134313; 
     opacity: 0.5;
     margin-bottom: 30px;
 }
