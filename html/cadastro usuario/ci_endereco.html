@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="c_inicial.css">
-    <script type="module" src="../../firebase connection/user register/registerInstituicao.js"></script>
+    <script type="module" src="../../firebase connection/user register/registerEndereco.js"></script>
 </head>
 
 <body>
@@ -22,21 +22,17 @@
         </div>
         <div class="text-center w-75">
             <h1 class="mb-5" style="color: #2c5f2d; font-weight: bold; border-radius: 10px;">Quase lá, Insira os dados do seu endereço.</h1>
-            <form>
+            <form id="formEndereco">
                 <div class="mb-3">
                     <input type="text" class="form-control" id="cep" placeholder="CEP">
                 </div>
 
                 <div class="mb-3">
-                    <input type="text" class="form-control" id="pais" placeholder="País">
+                    <input type="text" class="form-control" id="rua" placeholder="Rua">
                 </div>
                 
                 <div class="mb-3">
-                    <input type="text" class="form-control" id="estado" placeholder="Estado">
-                </div>
-
-                <div class="mb-3">
-                    <input type="text" class="form-control" id="cidade" placeholder="Cidade">
+                    <input type="text" class="form-control" id="numero" placeholder="Número">
                 </div>
 
                 <div class="mb-3">
@@ -44,11 +40,11 @@
                 </div>
 
                 <div class="mb-3">
-                    <input type="text" class="form-control" id="rua" placeholder="Rua">
+                    <input type="text" class="form-control" id="cidade" placeholder="Cidade">
                 </div>
 
                 <div class="mb-3">
-                    <input type="text" class="form-control" id="numero" placeholder="Número">
+                    <input type="text" class="form-control" id="estado" placeholder="Estado">
                 </div>
 
                 <div class="mb-3">

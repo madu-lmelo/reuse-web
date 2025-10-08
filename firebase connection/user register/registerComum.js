@@ -1,10 +1,7 @@
-// ✅ registerComum.js
-
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-app.js";
 import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-auth.js";
 import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-database.js";
 
-// Configuração do Firebase
 const firebaseConfig = {
     apiKey: "AIzaSyDfYcoijl5D_0EJk4pO1SjPFjeOnzzrsTM",
     authDomain: "reuse-1512f.firebaseapp.com",
@@ -14,32 +11,28 @@ const firebaseConfig = {
     appId: "1:296992709188:web:d1135e3a8beee9ac1f7a11"
 };
 
-// Inicialização
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const database = getDatabase(app);
 
-// Função específica para usuário comum
-function writeUserDataComum(userId, nome, email, telefone, usuario, cpf, nascimento, cep) {
-    const userRef = ref(database, `usuarios/pessoaFisica/${userId}`);
+function writeUserDataComum(uid, nome, email, telefone, usuario, cpf, nascimento) {
+    const userRef = ref(database, `usuarios/pessoaFisica/${uid}`);
     return set(userRef, {
         nomeCompleto: nome,
-        email: email,
-        telefone: telefone,
+        email,
+        telefone,
         nomeDeUsuario: usuario,
-        cpf: cpf,
+        cpf,
         dataNascimento: nascimento,
-        cep: cep,
         tipoPessoa: 'pessoaFisica',
         tipoUsuario: 'comum',
         dataCadastro: new Date().toISOString()
     });
 }
 
-// Evento de envio do formulário
 const submit = document.getElementById('submit');
-submit.addEventListener('click', (event) => {
-    event.preventDefault();
+submit.addEventListener('click', (e) => {
+    e.preventDefault();
 
     const nome = document.getElementById('nome').value;
     const email = document.getElementById('email').value;
@@ -48,19 +41,14 @@ submit.addEventListener('click', (event) => {
     const usuario = document.getElementById('usuario').value;
     const cpf = document.getElementById('cpf').value;
     const nascimento = document.getElementById('nascimento').value;
-    const cep = document.getElementById('cep').value;
 
     createUserWithEmailAndPassword(auth, email, senha)
         .then((userCredential) => {
             const user = userCredential.user;
-            return writeUserDataComum(user.uid, nome, email, telefone, usuario, cpf, nascimento, cep);
+            localStorage.setItem('currentUserUID', user.uid);
+            localStorage.setItem('currentUserTipo', 'pessoaFisica');
+            return writeUserDataComum(user.uid, nome, email, telefone, usuario, cpf, nascimento);
         })
-        .then(() => {
-            alert('Cadastro realizado com sucesso!');
-            window.location.href = 'ci_endereco.html';
-        })
-        .catch((error) => {
-            alert('Erro ao cadastrar: ' + error.message);
-            console.error(error);
-        });
+        .then(() => window.location.href = 'ci_endereco.html')
+        .catch((err) => alert('Erro: ' + err.message));
 });
