@@ -38,8 +38,12 @@ h1 {
     text-align: center;
 }
 
-.logo-img {
+
+
+.logo-img{
     height: 80px;
+    width: auto;
+    margin-bottom: 30px;
 }
 
 .form-control {
